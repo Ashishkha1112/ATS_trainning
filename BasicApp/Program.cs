@@ -22,28 +22,28 @@
 // James Bond      0       Thursday, January 11, 1990   M
 
 
-Student.PrintHeader();
+// Student.PrintHeader();
 
-var student = new Student("Sita Bond", 68, new DateTime(1990, 1, 11), 'F');
-student.PrintDetails();
+// var student = new Student("Sita Bond", 68, new DateTime(1990, 1, 11), 'F');
+// student.PrintDetails();
 
-var student3 = new Student("James Bond", 67, new DateTime(1990, 1, 11), 'F');
-student3.PrintDetails();
+// var student3 = new Student("James Bond", 67, new DateTime(1990, 1, 11), 'F');
+// student3.PrintDetails();
 
-var student4 = new Student("Rakeesh Bond", 798, new DateTime(2000, 1, 11), 'M');
-student4.PrintDetails();
+// var student4 = new Student("Rakeesh Bond", 798, new DateTime(2000, 1, 11), 'M');
+// student4.PrintDetails();
 
-Teacher.PrintHeader();
-var teacher1 = new Teacher("Rakeesh Rana", "MS Computer Science", new DateTime(2000, 1, 11), 'M');
-teacher1.PrintDetails();
-var teacher2 = new Teacher("Rakeesh Rana", "MS Computer Science", new DateTime(2000, 1, 11), 'M');
-teacher2.PrintDetails();
+// Teacher.PrintHeader();
+// var teacher1 = new Teacher("Rakeesh Rana", "MS Computer Science", new DateTime(2000, 1, 11), 'M');
+// teacher1.PrintDetails();
+// var teacher2 = new Teacher("Rakeesh Rana", "MS Computer Science", new DateTime(2000, 1, 11), 'M');
+// teacher2.PrintDetails();
 
-Admin.PrintHeader();
-var admin1 = new Teacher("Arjun Rana", "ALL", new DateTime(2000, 1, 11), 'M');
-admin1.PrintDetails();
-var admin2 = new Teacher("Ram", "ALL", new DateTime(2000, 1, 11), 'M');
-admin2.PrintDetails();
+// Admin.PrintHeader();
+// var admin1 = new Teacher("Arjun Rana", "ALL", new DateTime(2000, 1, 11), 'M');
+// admin1.PrintDetails();
+// var admin2 = new Teacher("Ram", "ALL", new DateTime(2000, 1, 11), 'M');
+// admin2.PrintDetails();
 
 // Work for admin
 
@@ -58,5 +58,10 @@ admin2.PrintDetails();
 // Generics g = new();
 // g.Print<decimal>(234.234234m);
 // g.Print<string>("Hello");
-var linq = new LINQ();
-linq.Test();
+// var linq = new LINQ();
+// linq.Test();
+var file =  new FileAndFolderHandler();
+file.CreateFile();
+ file.ReadFile();
+ file.CreateFolder("AAA");
+
