@@ -1,0 +1,50 @@
+﻿@model Doctor
+@{
+    ViewData["Title"] = "Add Doctors";
+
+
+    var genders = Enum.GetValues(typeof(Gender));
+
+}
+<form class="row g-3" method="post" action="Add">
+    <div class="col-md-6">
+        <label asp-for="FullName" class="form-label">Full Name</label>
+        <input asp-for="FullName" class="form-control" />
+    </div>
+    <div class="col-md-6">
+        <label asp-for="Address" class="form-label">Address</label>
+        <input asp-for="Address" class="form-control" />
+    </div>
+    <div class="col-md-6">
+        <label asp-for="Phone" class="form-label">Phone</label>
+        <input asp-for="Phone" class="form-control" />
+    </div>
+    <div class="col-md-6">
+        <label asp-for="NDCNumber" class="form-label">NDC Number</label>
+        <input asp-for="NDCNumber" class="form-control" />
+    </div>
+    <div class="col-md-6">
+        <label asp-for="Qualification" class="form-label">Qualification</label>
+        <input asp-for="Qualification" class="form-control" />
+    </div>
+    <div class="col-md-6">
+        <label asp-for="Specialization" class="form-label">Specialization</label>
+        <input asp-for="Specialization" class="form-control" />
+    </div>
+    <div class="col-md-6">
+        <label asp-for="Gender" class="form-label">Gender</label>
+        <select asp-for="Gender" class="form-control">
+            <option value="1">Male</option>
+            <option value="2">Female</option>
+            <option value="3">Other</option>
+        </select>
+    </div>
+    <div class="col-md-6">
+        <label asp-for="DOB" class="form-label">Date of Birth</label>
+        <input asp-for="DOB" class="form-control" type="date" />
+    </div>
+
+    <div class="col-12">
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+</form>

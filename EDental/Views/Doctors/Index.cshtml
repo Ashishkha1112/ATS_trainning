@@ -1,0 +1,51 @@
+@model List<Doctor>
+
+@{
+    ViewData["Title"] = "Doctors";
+}
+
+<table class="table" border="1">
+    <thead>
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Address</th>
+            <th scope="col">Phone</th>
+            <th scope="col">NDC Number</th>
+            <th scope="col">Qualification</th>
+            <th scope="col">Speciality</th>
+            <th scope="col">Gender</th>
+            <th scope="col">Date of Birth</th>
+            <th scope="col">Action</th>
+
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var doc in Model)
+
+
+
+        {
+            <tr>
+                <td>@doc.FullName</td>
+                <td>@doc.Address</td>
+                <td>@doc.Phone</td>
+                <td>@doc.NDCNumber</td>
+                <td>@doc.Qualification</td>
+                <td>@doc.Specialization</td>
+                <td>@doc.Gender</td>
+                <td>@doc.DOB.ToLongDateString()</td>
+                <td align="center">
+                    <a href="">
+                        <i class="bi bi-pencil-square text-warning"></i>
+                    </a>
+                    <a asp-action="Delete" asp-controller="Doctors" asp-route-id="@doc.Id">
+
+                        <i class="bi bi-trash text-danger"> </i>
+                    </a>
+                </td>
+
+            </tr>
+        }
+    </tbody>
+</table>
